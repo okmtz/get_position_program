@@ -1,0 +1,26 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+    </head>
+    <body>
+        
+        <img width="500" height="300" src="sample.png" id="js-target" style="background-color:gray;">
+        
+        <div id="position" style="display:block; margin-top: 50px;">
+            <ul>
+                <li id="pos-x">座標１</li>
+                <li id="pos-y">座標１</li> 
+            </ul>
+        </div>
+        <script type="text/javascript">
+            let target = document.getElementById('js-target');
+            target.addEventListener('click',function(e){
+                let offsetX = e.offsetX;
+                let offsetY = e.offsetY;
+                document.getElementById('pos-x').innerHTML = offsetX;
+                document.getElementById('pos-y').innerHTML = offsetY;
+            });
+           
+        </script>
+    </body>
+</html>
